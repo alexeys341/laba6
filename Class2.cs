@@ -9,6 +9,13 @@ namespace lab1_part2
         private float b = 0;
         private float c = 0;
 
+        public void give(float _a, float _b, float _c)
+        {
+            a = _a;
+            b = _b;
+            c = _c;
+        }
+
         public bool check(float _a, float _b, float _c)
         {
             a = _a;

@@ -134,16 +134,16 @@ namespace lab1_part2
                         int x = 5;
                         int y = 6;
                         int z = 7;
-                        Console.WriteLine("Существование рандомного треугольника(со сторонами 5,6,7)");
-                        result = third.check((float)x, (float)y, (float)z);
-                        Console.WriteLine(result);
+
+                        
+                        third.give(x, y, z);
 
                         Console.WriteLine("Существование рандомного треугольника(со сторонами 5,6,7), но уже через перегрузку");
                         result = (bool)third;
                         Console.WriteLine(result);
 
                         Console.WriteLine("Периметр рандомного треугольника");
-                        double P = third;
+                        double P = (double)third;
                         Console.WriteLine(P);
 
                         Console.WriteLine("Площадь рандомного треугольника");
