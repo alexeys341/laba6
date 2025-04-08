@@ -122,10 +122,10 @@ namespace lab1_part2
 
                     if (all_good1 == true)
                     {
-                        double Sq2 = second.square();
+                        double Sq2 = -second;
                         Console.WriteLine("Вот площадь второго треугольника");
                         Console.WriteLine(Sq2);
-                        double Sq1 = first.square();
+                        double Sq1 = -first;
                         Console.WriteLine("А вот площадь первого треугольника");
                         Console.WriteLine(Sq1);
 
@@ -138,12 +138,16 @@ namespace lab1_part2
                         result = third.check((float)x, (float)y, (float)z);
                         Console.WriteLine(result);
 
+                        Console.WriteLine("Существование рандомного треугольника(со сторонами 5,6,7), но уже через перегрузку");
+                        result = (bool)third;
+                        Console.WriteLine(result);
+
                         Console.WriteLine("Периметр рандомного треугольника");
-                        double P = third.perimetr(x, y, z);
+                        double P = third;
                         Console.WriteLine(P);
 
                         Console.WriteLine("Площадь рандомного треугольника");
-                        double Sq3 = third.square(x, y, z);
+                        double Sq3 = -third;
                         Console.WriteLine(Sq3);
 
                         Console.WriteLine("Сравним площади рандомного треугольника и второго");

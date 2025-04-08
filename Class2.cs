@@ -32,26 +32,11 @@ namespace lab1_part2
             }
         }
 
-        public double square()
+        public static double operator-(Triangles trial)
         {
-            if ((a + b > c) && (b + c > a) && (a + c > b))
-            {
-                double p = (a + b + c) / 2;
-                double Square = p * (p - a) * (p - b) * (p - c);
-                Square = Math.Sqrt(Square);
-                return Square;
-            }
-            else
-            {
-                return 0;
-            }
-        }
-
-        public double square(float _a, float _b, float _c)
-        {
-            a = _a;
-            b = _b;
-            c = _c;
+            float a = trial.a;
+            float b = trial.b;
+            float c = trial.c;
 
             if ((a + b > c) && (b + c > a) && (a + c > b))
             {
@@ -66,11 +51,36 @@ namespace lab1_part2
             }
         }
 
-        public double perimetr(double _a, double _b, double _c)
+        public static explicit operator bool(Triangles trial)
         {
+            float a = trial.a;
+            float b = trial.b;
+            float c = trial.c;
             if ((a + b > c) && (b + c > a) && (a + c > b))
             {
-                double Perim = _a + _b + _c;
+                Console.WriteLine("Такой треугольник существует");
+                return true;
+            }
+            else if ((a + b == c) || (b + c == a) || (a + c == b))
+            {
+                Console.WriteLine("Это не треугольник, а прямая линия");
+                return false;
+            }
+            else
+            {
+                Console.WriteLine("Это не треугольник, а какие-то три отрезка");
+                return false;
+            }
+        }
+
+        public static implicit operator double(Triangles trial)
+        {
+            float a = trial.a;
+            float b = trial.b;
+            float c = trial.c;
+            if ((a + b > c) && (b + c > a) && (a + c > b))
+            {
+                double Perim = a + b + c;
                 return Perim;
             }
             else
