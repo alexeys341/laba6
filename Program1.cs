@@ -54,6 +54,7 @@ namespace lab1_part1
                         Console.WriteLine("Вы неверно ввели наличие желания, введите заного");
                         flag = false;
                     }
+
                     if (flag == true)
                     {
                         Console.WriteLine("Надо ли уничтожить первого бота?");
